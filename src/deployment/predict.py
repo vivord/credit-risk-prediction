@@ -1,7 +1,9 @@
 import joblib
 import pandas as pd
 from src.utils.config import ARTIFACTS
-
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 model = joblib.load(ARTIFACTS / "xgboost_model.joblib")
 preprocessor = joblib.load(ARTIFACTS / "preprocessor.joblib")
 explainer = joblib.load(ARTIFACTS / "shap_explainer.joblib")
