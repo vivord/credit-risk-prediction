@@ -23,5 +23,6 @@ Setup Instructions (From Zero)
 - pip install -r requirements.txt
 - Run training: python src/train.py
 - Run API: uvicorn src.deployment.app:app --reload
-- Run Dashboard: streamlit run src/deployment/dashboard.py
+- Run Dashboard: set PYTHONPATH=.
+- Run Dashboard then: streamlit run src/deployment/dashboard.py
 - (Optional) docker build -t credit-risk . && docker run -p 8000:8000 -p 8501:8501 credit-risk
